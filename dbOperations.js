@@ -9,7 +9,7 @@ module.exports = {
 
         client.connect();
 
-        var query = client.query("select * from employee");
+        var query = client.query("create table employee firstname varchar,lastname varchar,email varchar,mobile varchar");
 
         query.on("row", function (row, result) { 
             result.addRow(row); 
